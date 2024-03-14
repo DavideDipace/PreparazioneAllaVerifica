@@ -8,5 +8,7 @@
   <input name = "corpo" type = "text" #destinatario>
   <label for = "corpo"> to </label>
 
-  <button> Invia </button>
+  <button (click) = "NuovaMail (destinatario, oggetto, corpo) ">
+    Invia
+  </button>
 </form>

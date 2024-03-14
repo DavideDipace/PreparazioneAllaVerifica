@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Email } from './mail.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Preparazione-alla-verifica';
+
+  Vettore: Email[] = [];
+  NuovaMail(destinatario: HTMLInputElement, oggetto: HTMLInputElement, corpo: HTMLInputElement): boolean{
+    this.Vettore.push(new Email(destinatario.value, oggetto.value, corpo.value))
+    console.log(this.Vettore)
+    return false
+  }
 }
